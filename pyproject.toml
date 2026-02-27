@@ -1,0 +1,28 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "steam-analisis"
+version = "0.1.0"
+description = "Análisis de datos de Steam con machine learning"
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+authors = [{ name = "" }]
+
+dependencies = [
+  "numpy",
+  "pandas",
+  "matplotlib==3.10.8",
+  "seaborn==0.13.2",
+  "scikit-learn",
+  "streamlit",
+  "ipykernel",
+]
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[tool.setuptools.packages.find]
+where = ["src"]

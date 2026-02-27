@@ -1,0 +1,142 @@
+
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reporte de Juegos en Steam</title>
+    <style>
+        :root {
+            --steam-dark: #171a21;
+            --steam-blue: #1b2838;
+            --steam-light-blue: #66c0f4;
+            --text-color: #c7d5e0;
+            --card-bg: #2a475e;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--steam-dark);
+            color: var(--text-color);
+            margin: 0;
+            padding: 20px;
+        }
+
+        header {
+            text-align: center;
+            padding-bottom: 40px;
+            border-bottom: 2px solid var(--card-bg);
+            margin-bottom: 40px;
+        }
+
+        h1 {
+            color: white;
+            font-size: 2.5rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .galeria {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(600px, 1fr));
+            gap: 30px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .item-foto {
+            background-color: var(--steam-blue);
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.5);
+            transition: transform 0.3s ease;
+            border: 1px solid rgba(102, 192, 244, 0.1);
+            width:100%;
+        }
+
+        .item-foto:hover {
+            transform: translateY(-5px);
+            border-color: var(--steam-light-blue);
+        }
+
+        .item-foto img {
+            width: 100%;
+            height: auto;
+            display: block;
+            border-bottom: 4px solid var(--card-bg);
+        }
+
+        .item-foto h2 {
+            padding: 15px;
+            margin: 0;
+            font-weight: bold;
+            text-align: center;
+            background: var(--card-bg);
+            color: white;
+            font-size: 1.5rem;
+            text-transform:uppercase;
+        }
+        
+        .insight-box{
+            padding:2em;
+            text-align:center;
+            background:var(--card-bg);
+            color:white;
+            font-size:1.1rem;
+        }
+
+        /* Pie de página o Info adicional */
+        .footer-note {
+            text-align: center;
+            margin-top: 50px;
+            font-size: 0.8rem;
+            color: #566471;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Reporte Juegos de Steam</h1>
+    </header>
+    <div class="galeria">
+        
+    <div class="item-foto">
+        <h2 class="titulo-grafico">Cantidad Tipo Jugadores </h2>
+        <img src="..\src\visualization/cantidad_tipo_jugadores.png" alt="Imagen 1"   />
+        
+        <div class="insight-box">
+                    <strong>Análisis:</strong> 
+                    
+                     Hay una tendencia de muchos jugadores son los que compran el juego y sus horas de juegos son casuales. Los jugadores hardcore son los menos.
+                </div>
+        
+    </div>
+        
+    <div class="item-foto">
+        <h2 class="titulo-grafico">Retencion Juegos Comprados Vs Jugados </h2>
+        <img src="..\src\visualization/retencion_juegos_comprados_vs_jugados.png" alt="Imagen 2"   />
+        
+        <div class="insight-box">
+                    <strong>Análisis:</strong> 
+                    
+                    Comprobamos que hay mucha cantidad de juegos comprados que no tienen ni una 1 hora de juego.
+                </div>
+        
+    </div>
+        
+    <div class="item-foto">
+        <h2 class="titulo-grafico">Top10 Juegos Jugados </h2>
+        <img src="..\src\visualization/Top10_juegos_jugados.png" alt="Imagen 3"   />
+        
+        <div class="insight-box">
+                    <strong>Análisis:</strong> 
+                    
+                    Dota2 es sin dudas el juego con mas cantidad de horas jugadas.
+                </div>
+        
+    </div>
+        
+    </div>   
+</body>
+</html>
+    
