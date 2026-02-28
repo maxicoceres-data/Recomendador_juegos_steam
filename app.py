@@ -25,7 +25,7 @@ sim_df = cargar_datos()
 
 
 st.title("Recomendador de juegos en Steam")
-
+st.divider()
 opciones = sim_df.index.to_list()
 
 seleccion = st.selectbox("Seleccione un juego:", opciones, index=None,placeholder="--- Escribe para buscar un juego ---",label_visibility="hidden")
@@ -44,3 +44,15 @@ if boton_recomendar and seleccion:
             with st.container(border=True):
                 st.markdown(f"### 🎮 {juego}")
                 st.caption(f"Similitud: {score:.3f}")
+
+
+# Para crear un footer, uso markdown y dentro puedo agregar codigo html y si quiero css
+st.divider()
+st.markdown(
+    """
+    <div style="text-align: center;">
+        <p>Desarrollado por <b>Maxi</b> | 2026</p>
+    </div>
+    """, 
+    unsafe_allow_html=True
+)
